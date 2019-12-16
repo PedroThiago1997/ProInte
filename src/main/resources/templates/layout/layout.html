@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8" />
+<title
+	th:text="' Proyecto Integrador: MVC + Thymeleaf + Data JPA - ' + ${titulo}">Insert
+	title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+</head>
+<body>
+
+	<header th:fragment="header">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<a class="navbar-brand" href="">Proyecto Integrador</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link" href="">Inicio</a></li>
+					<li class="nav-item"><a class="nav-link" href="#about"
+						th:href="@{/listar}">Pregunta</a></li>
+						<li class="nav-item"><a class="nav-link" href="#about"
+						th:href="@{/empresa}">EMPRESA</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container"></div>
+
+	<footer th:fragment="footer" class="container">
+		<hr />
+		<img th:src="@{/images/spring.png}" alt="Spring-logo" />
+		<p>
+			Proyecto desarrollado en IDE Eclipse + Spring Plugins (STS Spring
+			Tool), 2F.<br /> &copy; Enterprise 2019, Inc. Todos los derechos
+			reservados. Términos de uso y privacidad.<br />
+		</p>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</footer>
+
+</body>
+</html>
